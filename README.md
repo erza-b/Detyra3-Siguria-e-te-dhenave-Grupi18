@@ -1,6 +1,7 @@
 # Detyra3-Siguria-e-te-dhenave-Grupi18
 
-Detyra e trete ne kuader te lendes "Siguria e te dhenave" ne Fakultetin e Inxhinierise Elektrike dhe Kompjuterike - FIEK
+Detyra e trete ne kuader te lendes "Siguria e te dhenave" ne Fakultetin e Inxhinierise Elektrike dhe Kompjuterike - FIEK.
+
 Aplikacion permes te cilit do te behet Enkriptimi/Dekriptimi i nje fajlli me TripleDes Agloritmin (3DES-2Key) me modin CBC
 
 Aplikacioni është shkruar në Python dhe përdor bibliotekën "Crypto" për të zgjeruar algoritmin TripleDES dhe algoritmin "Padding" (për zgjerimin e mesazheve). Modaliteti CBC përdoret për të përmirësuar sigurinë e enkriptimit.
@@ -11,4 +12,7 @@ Rezultati i enkriptimit dhe dekriptimit do të shfaqet në një file të ri me e
 
 Për të përdorur këtë aplikacion, duhet të keni instaluar Python 3 dhe bibliotekën "Crypto". 
 
-Grupi 18:Ermal Limaj,Erza Bërbatovci,Erza Merovci,Esra Qerimi.
+Grupi 18:Ermal Limaj,
+Erza Bërbatovci,
+Erza Merovci,
+Esra Qerimi.
