@@ -25,5 +25,31 @@ def encrypt_decrypt_file():
 
             with open(file_path, "rb") as file:
                 data = file.read()
+                # Encrypt the data
+            encrypt_cipher = DES3.new(key1 + key2, DES3.MODE_CBC, iv)
+            encrypted_data = encrypt_cipher.encrypt(pad(data, DES3.block_size))
+
+            # Convert encrypted data to hexadecimal string
+            encrypted_hex = bytes_to_hex_string(encrypted_data)
+
+            # Decrypt the data
+            decrypt_cipher = DES3.new(key1 + key2, DES3.MODE_CBC, iv)
+            decrypted_data = unpad(decrypt_cipher.decrypt(hex_string_to_bytes(encrypted_hex)), DES3.block_size)
+
+            # Save the encrypted and decrypted data to the same file
+            output_file_path = filedialog.asksaveasfilename(defaultextension=".enc")
+            if output_file_path:
+                with open(output_file_path, "w") as output_file:
+                    output_file.write("Encrypted Data:\n")
+                    output_file.write(encrypted_hex)
+                    output_file.write("\n\nDecrypted Data:\n")
+                    output_file.write(decrypted_data.decode())
+
+                print("Encryption and decryption completed successfully!")
+                print("Output file saved at:", output_file_path)
+
+        except Exception as e:
+            print("An error occurred during encryption and decryption:", str(e))
+
 
 
