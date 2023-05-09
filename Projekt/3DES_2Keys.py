@@ -11,6 +11,8 @@ def generate_random_key(size):
 def bytes_to_hex_string(data):
     return binascii.hexlify(data).decode()
 
+def hex_string_to_bytes(hex_string):
+    return binascii.unhexlify(hex_string)
 
 
 
