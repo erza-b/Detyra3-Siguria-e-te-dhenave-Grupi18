@@ -15,6 +15,15 @@ def hex_string_to_bytes(hex_string):
     return binascii.unhexlify(hex_string)
 
 
+def encrypt_decrypt_file():
+    file_path = filedialog.askopenfilename()
+    if file_path:
+        try:
+            key1 = generate_random_key(8)
+            key2 = generate_random_key(8)
+            iv = get_random_bytes(8)
 
+            with open(file_path, "rb") as file:
+                data = file.read()
 
 
