@@ -115,4 +115,9 @@ decrypted_content.pack(pady=5)
 decrypted_content.config(yscrollcommand=scrollbar.set)
 scrollbar.config(command=decrypted_content.yview)
 
+root=tk.Tk()
+encrypt_decrypt_button=tk.button(root,text="Encrypt and decrypt")
+encrypt_decrypt_button.pack()
+
+
 root.mainloop()
