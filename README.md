@@ -16,3 +16,23 @@ Grupi 18:Ermal Limaj,
 Erza Bërbatovci,
 Erza Merovci,
 Esra Qerimi.
+
+
+English ReadMe
+
+The third task part of the subject "Data Security" in the Faculty of Electrical and Computer Engineering - FIEK.
+
+Application through which the Encryption/Decryption of a file will be done with TripleDes Agloritmin (3DES-2Key) with CBC mode
+
+The application is written in Python and uses the "Crypto" library for those of the TripleDES algorithm and the "Padding" algorithm (for expanding messages). CBC mode is used to ensure encryption security.
+
+For this whole part, first you need to select the file you want to encrypt or decrypt. After file selections, it generates two random keys and an initial random vector (IV), and then uses these to write and then decrypt the selected file.
+
+The result of encryption and decryption will be found in a new file with the chosen name and the extension ".enc". This file will contain the data written in that one hex string, and the decrypted data in the details of the original text.
+
+For all these applications, you must have Python 3 and the "Crypto" library installed.
+
+Group 18: Ermal Limaj,
+Erza Bërbatovci,
+Erza Merovci,
+Esra Qerimi.
