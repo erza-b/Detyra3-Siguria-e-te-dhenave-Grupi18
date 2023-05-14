@@ -7,7 +7,7 @@ Hapi 1: Ngarkimi i file-it
     Përdoruesi fillon aplikacionin dhe zgjedh opcionin për të enkriptuar ose dekriptuar një file.
     Nëse zgjidh opsionin për të enkriptuar/dekriptuar një file tekst/Markdown (".txt/.md"), aplikacioni hap një dritare të re për të zgjedhur file-in relevante.
     Pasi zgjidhet file-i, përmbajtja e tij ngarkohet në aplikacion për të vazhduar me veprimet e mëtejshme.
-
+    
 Hapi 2: Enkriptimi dhe Dekriptimi i Përmbajtjes
     Pas ngarkimit të file-it, përdoruesi klikon butonin për të filluar procesin e enkriptimit dhe dekriptimit.
     Aplikacioni përdor algoritmin 3DES për të kriptuar përmbajtjen e file-it të zgjedhur, duke përdorur dy çelësa të gjeneruara rastësisht dhe një vektor inicializimi (IV).
@@ -35,12 +35,15 @@ Pamjet e aplikacionit:
 ![PHOTO1](/images/Screenshot1.png)
 
 Ne rast se zgjedhim "yes":
-![PHOTO1](/images/Screenshot2.png)
+![PHOTO2](/images/Screenshot2.png)
 
 Ne rast se zgjedhim "no":
 ![PHOTO1](/images/Screenshot3.png)
 
 
+![PHOTO3](/images/Screenshot3.png)
+
+![PHOTO4](/images/Screenshot4.png)
 Group 18: Ermal Limaj,
 Erza Bërbatovci,
 Erza Merovci,
