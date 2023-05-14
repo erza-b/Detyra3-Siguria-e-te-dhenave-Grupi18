@@ -28,7 +28,7 @@ def show_success_message(message):
 def encrypt_decrypt_file():
     file_path = filedialog.askopenfilename()
     if file_path:
-        try:
+        try: 
             key1 = generate_random_key(8)
             key2 = generate_random_key(8)
             iv = get_random_bytes(8)
