@@ -2,7 +2,7 @@
 
 Detyra e trete ne kuader te lendes "Siguria e te dhenave" ne Fakultetin e Inxhinierise Elektrike dhe Kompjuterike - FIEK.
 
-Aplikacion permes te cilit do te behet Enkriptimi/Dekriptimi i nje fajlli me TripleDes Agloritmin (3DES-2Key) me modin CBC
+# Aplikacion permes te cilit do te behet Enkriptimi/Dekriptimi i nje fajlli me TripleDes Agloritmin (3DES-2Key) me modin CBC
 
 Aplikacioni është shkruar në Python dhe përdor bibliotekën "Crypto" për të zgjeruar algoritmin TripleDES dhe algoritmin "Padding" (për zgjerimin e mesazheve). Modaliteti CBC përdoret për të përmirësuar sigurinë e enkriptimit.
 
@@ -36,10 +36,12 @@ Pamjet e aplikacionit:
 ![PHOTO1](/images/Screenshot1.png)
 
 Ne rast se zgjedhim "yes":
-![PHOTO1](/images/Screenshot2.png)
+![PHOTO2](/images/Screenshot2.png)
 
 Ne rast se zgjedhim "no":
-![PHOTO1](/images/Screenshot3.png)
+![PHOTO3](/images/Screenshot3.png)
+
+![PHOTO4](/images/Screenshot4.png)
 Group 18: Ermal Limaj,
 Erza Bërbatovci,
 Erza Merovci,
