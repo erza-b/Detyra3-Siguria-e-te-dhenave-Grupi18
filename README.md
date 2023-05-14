@@ -32,6 +32,14 @@ The result of encryption and decryption will be found in a new file with the cho
 
 For all these applications, you must have Python 3 and the "Crypto" library installed.
 
+Pamjet e aplikacionit:
+![PHOTO1](/images/Screenshot1.png)
+
+Ne rast se zgjedhim "yes":
+![PHOTO1](/images/Screenshot2.png)
+
+Ne rast se zgjedhim "no":
+![PHOTO1](/images/Screenshot3.png)
 Group 18: Ermal Limaj,
 Erza Bërbatovci,
 Erza Merovci,
