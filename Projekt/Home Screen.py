@@ -28,3 +28,17 @@ else:
     root=tk.Tk()
     root.title("Enkriptimi dhe dekriptimi")
 
+    main_frame = tk.Frame(root)
+main_frame.pack(padx=50, pady=30)
+
+btn_frame = tk.Frame(main_frame)
+btn_frame.pack(pady=10)
+
+encrypt_decrypt_btn = tk.Button(btn_frame, text="Enkripto/Dekripto", width=15, command=file_selection)
+encrypt_decrypt_btn.pack(side=tk.LEFT, padx=10)
+
+cancel_btn = tk.Button(btn_frame, text="Anullo", width=15, command=root.destroy)
+cancel_btn.pack(side=tk.LEFT, padx=10)
+
+root.mainloop()
+
