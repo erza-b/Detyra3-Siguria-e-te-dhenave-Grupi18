@@ -4,6 +4,7 @@ from Crypto.Cipher import DES3
 from Crypto.Util.Padding import pad, unpad
 from Crypto.Random import get_random_bytes
 import binascii
+import os
 
 
 def generate_random_key(size):
@@ -19,7 +20,9 @@ def hex_string_to_bytes(hex_string):
 
 
 def show_success_message(message):
-    success_label.config(text=message)
+    current_message = success_label.cget("text")
+    new_message = current_message + "\n" + message
+    success_label.config(text=new_message)
 
 
 def encrypt_decrypt_file():
@@ -38,24 +41,24 @@ def encrypt_decrypt_file():
 
             encrypted_hex = bytes_to_hex_string(encrypted_data)
 
-            encrypted_file_path = filedialog.asksaveasfilename(defaultextension=".enc")
-            if encrypted_file_path:
-                with open(encrypted_file_path, "w") as encrypted_file:
-                    encrypted_file.write(encrypted_hex)
+            directory = os.path.dirname(file_path)
+            file_name = os.path.basename(file_path)
+            encrypted_file_path = os.path.join(directory, f"{os.path.splitext(file_name)[0]}_encrypted{os.path.splitext(file_name)[1]}")
+            with open(encrypted_file_path, "w") as encrypted_file:
+                encrypted_file.write(encrypted_hex)
 
-                show_success_message("Enkriptimi u krye me sukses!")
-                print("File-i i enkriptuar u ruajt në:", encrypted_file_path)
+            show_success_message("Enkriptimi u krye me sukses!")
+            print("File-i i enkriptuar u ruajt në:", encrypted_file_path)
 
             decrypt_cipher = DES3.new(key1 + key2, DES3.MODE_CBC, iv)
             decrypted_data = unpad(decrypt_cipher.decrypt(hex_string_to_bytes(encrypted_hex)), DES3.block_size)
 
-            decrypted_file_path = filedialog.asksaveasfilename(defaultextension=".dec")
-            if decrypted_file_path:
-                with open(decrypted_file_path, "wb") as decrypted_file:
-                    decrypted_file.write(decrypted_data)
+            decrypted_file_path = os.path.join(directory, f"{os.path.splitext(file_name)[0]}_decrypted{os.path.splitext(file_name)[1]}")
+            with open(decrypted_file_path, "wb") as decrypted_file:
+                decrypted_file.write(decrypted_data)
 
-                show_success_message("Dekriptimi u krye me sukses!")
-                print("File-i i dekriptuar u ruajt në:", decrypted_file_path)
+            show_success_message("Dekriptimi u krye me sukses!")
+            print("File-i i dekriptuar u ruajt në:", decrypted_file_path)
 
         except Exception as e:
             print("An error occurred during encryption and decryption:", str(e))
