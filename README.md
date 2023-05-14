@@ -40,9 +40,7 @@ Ne rast se zgjedhim "yes":
 Ne rast se zgjedhim "no":
 ![PHOTO1](/images/Screenshot3.png)
 
-
-![PHOTO3](/images/Screenshot3.png)
-
+Ne rast te perfundimit me sukses te enkriptimit dhe dekriptimit te file-it. 
 ![PHOTO4](/images/Screenshot4.png)
 Group 18: Ermal Limaj,
 Erza Bërbatovci,
