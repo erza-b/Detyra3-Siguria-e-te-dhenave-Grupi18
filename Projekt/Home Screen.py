@@ -18,7 +18,7 @@ def redirect_other():
 def file_selection():
     # Mesazhi i messagebox-it qe pyet perdoruesin nese deshiron te enkriptoje dhe dekriptoje nje file .txt/.md ose nje file tjeter
     response = messagebox.askquestion("Enkriptimi dhe Dekriptimi", "Deshironi te enkriptoni dhe dekriptoni nje file '.txt/.md' ose nje file tjeter? \n ('yes' per .txt/.md, 'no' per file tjeter)", icon='question')
-    if response == 'po':
+    if response == 'yes':
         redirect_txt()
     else:
         redirect_other()
