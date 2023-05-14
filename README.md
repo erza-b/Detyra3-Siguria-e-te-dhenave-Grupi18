@@ -2,35 +2,34 @@
 
 Detyra e trete ne kuader te lendes "Siguria e te dhenave" ne Fakultetin e Inxhinierise Elektrike dhe Kompjuterike - FIEK.
 
-Aplikacion permes te cilit do te behet Enkriptimi/Dekriptimi i nje fajlli me TripleDes Agloritmin (3DES-2Key) me modin CBC
+Aplikacioni ofron një mënyrë për të enkriptuar dhe dekriptuar përmbajtjen e file-ve duke përdorur algoritmin 3DES (Triple Data Encryption Standard) me dy çelësa të gjeneruara rastësisht. Këtu është si operon aplikacioni në disa hapa:
+Hapi 1: Ngarkimi i file-it
+    Përdoruesi fillon aplikacionin dhe zgjedh opcionin për të enkriptuar ose dekriptuar një file.
+    Nëse zgjidh opsionin për të enkriptuar/dekriptuar një file tekst/Markdown (".txt/.md"), aplikacioni hap një dritare të re për të zgjedhur file-in relevante.
+    Pasi zgjidhet file-i, përmbajtja e tij ngarkohet në aplikacion për të vazhduar me veprimet e mëtejshme.
 
-Aplikacioni është shkruar në Python dhe përdor bibliotekën "Crypto" për të zgjeruar algoritmin TripleDES dhe algoritmin "Padding" (për zgjerimin e mesazheve). Modaliteti CBC përdoret për të përmirësuar sigurinë e enkriptimit.
+Hapi 2: Enkriptimi dhe Dekriptimi i Përmbajtjes
+    Pas ngarkimit të file-it, përdoruesi klikon butonin për të filluar procesin e enkriptimit dhe dekriptimit.
+    Aplikacioni përdor algoritmin 3DES për të kriptuar përmbajtjen e file-it të zgjedhur, duke përdorur dy çelësa të gjeneruara rastësisht dhe një vektor inicializimi (IV).
+    Pas enkriptimit, përmbajtja e file-it të enkriptuar shfaqet në një dritare të veçantë.
+    Pastaj, aplikacioni dekripton përmbajtjen e enkriptuar përsëri duke përdorur të njëjtat çelësa dhe IV. Përmbajtja e dekriptuar shfaqet në një dritare të veçantë.
+    
+Hapi 3: Ruajtja e File-it të Enkriptuar
+    Nëse përdoruesi zgjedh të enkriptoje një file tekst/Markdown, aplikacioni krijon një file të ri me të njëjtin emër dhe shtojcën "_encrypted" në të njëjtën direktori ku gjendet file-i origjinal.
+    File-i i ri i enkriptuar përmban përmbajtjen e enkriptuar të file-it origjinal në një format heksadecimal.
+    Aplikacioni tregon një mesazh të suksesit për të konfirmuar që enkriptimi është kryer me sukses dhe specifikon rrugën ku është ruajtur file-i i enkriptuar.
 
-Për të përdorur këtë aplikacion, së pari duhet të zgjidhni fajllin që dëshironi të enkriptoni ose dekriptoni. Pas zgjedhjes së fajllit, aplikacioni gjeneron dy çelësa të rastit dhe një vektor fillestar të rastit (IV), dhe pastaj përdor këto për të enkriptuar dhe pastaj dekriptuar fajllin e zgjedhur.
+Hapi 4: Ruajtja e File-it të Dekriptuar (vetëm për "otherfiles.py")
+    Nëse përdoruesi zgjedh të enkriptoje një file tjetër (jo tekst/Markdown), pasi të jetë kryer enkriptimi, aplikacioni krijon një file të ri me të njëjtën emër dhe shtojcën "_decrypted" në të njëjtën direktori si file-i origjinal.
+    File-i i ri të dekriptuar përmban përmbajtjen e file-it origjinal pas dekriptimit.
+    Aplikacioni tregon një mesazh të suksesit për të konfirmuar që dekriptimi është kryer me sukses dhe specifikon rrugën ku është ruajtur file-i i dekriptuar.
 
-Rezultati i enkriptimit dhe dekriptimit do të shfaqet në një file të ri me emrin e zgjedhur dhe shtojcën ".enc". Ky file do të përmbajë të dhënat e enkriptuara në formën e një stringu heksadecimal, dhe të dhënat e dekriptuara në formën e tekstit origjinal.
-
-Për të përdorur këtë aplikacion, duhet të keni instaluar Python 3 dhe bibliotekën "Crypto". 
 
 Grupi 18:Ermal Limaj,
 Erza Bërbatovci,
 Erza Merovci,
 Esra Qerimi.
 
-
-English ReadMe
-
-The third task part of the subject "Data Security" in the Faculty of Electrical and Computer Engineering - FIEK.
-
-Application through which the Encryption/Decryption of a file will be done with TripleDes Agloritmin (3DES-2Key) with CBC mode
-
-The application is written in Python and uses the "Crypto" library for those of the TripleDES algorithm and the "Padding" algorithm (for expanding messages). CBC mode is used to ensure encryption security.
-
-For this whole part, first you need to select the file you want to encrypt or decrypt. After file selections, it generates two random keys and an initial random vector (IV), and then uses these to write and then decrypt the selected file.
-
-The result of encryption and decryption will be found in a new file with the chosen name and the extension ".enc". This file will contain the data written in that one hex string, and the decrypted data in the details of the original text.
-
-For all these applications, you must have Python 3 and the "Crypto" library installed.
 
 Pamjet e aplikacionit:
 ![PHOTO1](/images/Screenshot1.png)
@@ -40,6 +39,8 @@ Ne rast se zgjedhim "yes":
 
 Ne rast se zgjedhim "no":
 ![PHOTO1](/images/Screenshot3.png)
+
+
 Group 18: Ermal Limaj,
 Erza Bërbatovci,
 Erza Merovci,
