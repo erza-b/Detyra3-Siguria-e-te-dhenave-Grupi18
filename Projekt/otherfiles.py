@@ -61,11 +61,11 @@ def encrypt_decrypt_file():
             print("File-i i dekriptuar u ruajt në:", decrypted_file_path)
 
         except Exception as e:
-            print("An error occurred during encryption and decryption:", str(e))
+            print("Një error u shfaq gjatë enkriptimit dhe dekriptimit:", str(e))
 
 
 root = tk.Tk()
-root.title("Enkriptimi dhe Dekriptimi i File-ve")
+root.title("Enkriptimi dhe Dekriptimi i File-eve")
 
 main_frame = tk.Frame(root)
 main_frame.pack(padx=120, pady=70)
