@@ -86,7 +86,7 @@ load_file_button = tk.Button(button_frame, text="Ngarko File-in", command=load_t
 load_file_button.pack(side=tk.LEFT)
 
 #Dritarja tekstuale e permbajtjes
-text_content = tk.Text(main_frame, height=10, width=40)
+text_content = tk.Text(main_frame, height=10, width=100)
 text_content.pack(pady=10)
 
 #Butoni per enkriptim dhe dekriptim
@@ -114,10 +114,5 @@ decrypted_content = tk.Text(main_frame, height=10, width=100, wrap=tk.WORD, stat
 decrypted_content.pack(pady=5)
 decrypted_content.config(yscrollcommand=scrollbar.set)
 scrollbar.config(command=decrypted_content.yview)
-
-root=tk.Tk()
-encrypt_decrypt_button=tk.button(root,text="Encrypt and decrypt")
-encrypt_decrypt_button.pack()
-
 
 root.mainloop()
