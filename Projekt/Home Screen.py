@@ -3,9 +3,6 @@ from tkinter import messagebox
 import os
 import sys
 
-import response as response
-
-
 def redirect_txt():
     # Krijimi i path-it te file-it te njejt duke perdorur os.path.join()
     file_path = os.path.join("Projekt", "txtfiles.py")
@@ -19,16 +16,17 @@ def redirect_other():
     sys.exit()
 
 def file_selection():
-    #Mesazhi i messagebox-it qe pyet perdoruesin nese deshiron te enkriptojke dhe dekriptoje nje file .txt/.md ose  je file tjeter
-    response=messagebox.askquestion("Enkriptimi dhe Dekriptimi","Deshironi te enkriptoni nje file '.txt/.md' ose nje file tjeter?\n('yes' per .txt/md,'no' per file tjeter)",icon='question')
-if response=='po':
-    redirect_txt()
-else:
-    redirect_other()
-    root=tk.Tk()
-    root.title("Enkriptimi dhe dekriptimi")
+    # Mesazhi i messagebox-it qe pyet perdoruesin nese deshiron te enkriptoje dhe dekriptoje nje file .txt/.md ose nje file tjeter
+    response = messagebox.askquestion("Enkriptimi dhe Dekriptimi", "Deshironi te enkriptoni dhe dekriptoni nje file '.txt/.md' ose nje file tjeter? \n ('yes' per .txt/.md, 'no' per file tjeter)", icon='question')
+    if response == 'po':
+        redirect_txt()
+    else:
+        redirect_other()
 
-    main_frame = tk.Frame(root)
+root = tk.Tk()
+root.title("Enkriptimi dhe Dekriptimi")
+
+main_frame = tk.Frame(root)
 main_frame.pack(padx=50, pady=30)
 
 btn_frame = tk.Frame(main_frame)
@@ -41,4 +39,3 @@ cancel_btn = tk.Button(btn_frame, text="Anullo", width=15, command=root.destroy)
 cancel_btn.pack(side=tk.LEFT, padx=10)
 
 root.mainloop()
-
